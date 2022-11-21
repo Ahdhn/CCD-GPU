@@ -89,7 +89,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:
 
   # --ptxas-options=-v
   # --maxrregcount=7
-  -fPIC # https://stackoverflow.com/questions/5311515/gcc-fpic-option
+  $<$<CXX_COMPILER_ID:GNU>:-fPIC># https://stackoverflow.com/questions/5311515/gcc-fpic-option
   >
 )
 
@@ -149,7 +149,7 @@ if(CCDGPU_TOPLEVEL_PROJECT)
     --ptxas-options=-v
 
     # --maxrregcount=7
-    -fPIC # https://stackoverflow.com/questions/5311515/gcc-fpic-option
+    $<$<CXX_COMPILER_ID:GNU>:-fPIC># https://stackoverflow.com/questions/5311515/gcc-fpic-option
     >
   )
 endif()

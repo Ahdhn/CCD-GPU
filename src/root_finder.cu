@@ -1,5 +1,7 @@
 #include <array>
+#ifdef CCD_TOI_PER_QUERY
 #include <ccdgpu/rational.hpp>
+#endif
 #include <ccdgpu/record.hpp>
 #include <ccdgpu/root_finder.cuh>
 #include <float.h>

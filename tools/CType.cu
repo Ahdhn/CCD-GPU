@@ -10,7 +10,7 @@ __host__ __device__ Scalar3 make_Scalar3(const Scalar &a, const Scalar &b,
 __host__ __device__ Scalar2 make_Scalar2(const Scalar &a, const Scalar &b) {
   return make_double2(a, b);
 }
-#warning Using Double
+//#warning Using Double
 #else
 #warning Using Float
 __host__ __device__ Scalar3 make_Scalar3(const Scalar &a, const Scalar &b,
