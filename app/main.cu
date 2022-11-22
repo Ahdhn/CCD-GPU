@@ -45,8 +45,12 @@ using namespace stq::gpu;
 using namespace ccd::gpu;
 
 bool is_file_exist(const char *fileName) {
-  std::ifstream infile(fileName);
-  return infile.good();
+  if (fileName) {
+    std::ifstream infile(fileName);
+    return infile.good();
+  } else {
+    return false;
+  }
 }
 
 int main(int argc, char **argv) {
